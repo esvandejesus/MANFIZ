@@ -159,10 +159,11 @@ The result files record these events explicitly.
 | `docs/reproducibility.md` | Protocol, versions, seeds, and commands |
 | `docs/training_report.md` | Findings, corrections, and results from the new training runs |
 
-The code and results are prepared for public repository distribution.
-The publication license is defined by the author; see `NOTICE.md`.
-`CITATION.cff` contains the manuscript authorship information without inventing
-a DOI or repository URL.
+The source code and reproducibility artifacts are publicly available at
+`https://github.com/esvandejesus/MANFIZ`. MANFIZ is released under the
+BSD 3-Clause License; see `LICENSE` and `NOTICE.md`. `CITATION.cff` contains
+software citation metadata for version 1.0.0. A software DOI will be added after
+the archived release is deposited and the DOI is issued.
 
 ## Summary
 

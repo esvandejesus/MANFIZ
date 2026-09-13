@@ -1,15 +1,20 @@
 cff-version: 1.2.0
-message: "Please cite this software and the associated MANFIZ manuscript when using this work. No publication DOI has been assigned in this package."
+message: "If you use MANFIZ in research, please cite this software and the associated MANFIZ publication when available."
 type: software
-title: "MANFIZ Toolbox: shared-premise neuro-fuzzy zonotopic identification"
-version: 0.1.0
-date-released: 2026-09-13
+title: "MANFIZ: Multi-Output Adaptive Neuro-Fuzzy Inference with Zonotopic Consequents for Deterministic Set-Based Uncertainty Estimation"
+version: 1.0.0
 authors:
   - family-names: "Pérez-Pérez"
     given-names: "Esvan-Jesús"
-abstract: "Native Python implementation of shared-premise multi-output fuzzy identification, zonotopic consequent fitting, adaptive outer reduction, and conditional bounded-noise intervals."
+repository-code: "https://github.com/esvandejesus/MANFIZ"
+url: "https://github.com/esvandejesus/MANFIZ"
+license: "BSD-3-Clause"
+abstract: "Native Python toolbox for shared-premise multi-output neuro-fuzzy system identification with zonotopic consequents, common-parameter feasibility calibration, adaptive outer reduction, bounded regressor-noise propagation, causal free-run prediction, and reproducible interval-coverage verification."
 keywords:
   - neuro-fuzzy identification
   - zonotopes
   - set-membership estimation
   - multi-output systems
+  - interval prediction
+  - uncertainty propagation
+  - system identification

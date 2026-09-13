@@ -4,18 +4,36 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "manfiz-toolbox"
-version = "0.1.0"
-description = "Shared-premise neuro-fuzzy zonotopic system identification in Python"
+version = "1.0.0"
+description = "Multi-output neuro-fuzzy system identification with zonotopic consequents and deterministic set-based uncertainty estimation"
 authors = [{name = "Esvan-Jesús Pérez-Pérez"}]
 readme = "README.md"
 requires-python = ">=3.10"
+license = {text = "BSD-3-Clause"}
+keywords = [
+  "neuro-fuzzy",
+  "zonotopes",
+  "set-membership",
+  "system-identification",
+  "multi-output",
+  "uncertainty",
+]
 dependencies = ["numpy>=1.24", "scipy>=1.11"]
 classifiers = [
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+
+[project.urls]
+Homepage = "https://github.com/esvandejesus/MANFIZ"
+Repository = "https://github.com/esvandejesus/MANFIZ"
+Issues = "https://github.com/esvandejesus/MANFIZ/issues"
 
 [project.optional-dependencies]
 plots = ["matplotlib>=3.7"]
