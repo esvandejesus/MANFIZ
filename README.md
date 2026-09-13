@@ -21,9 +21,9 @@ python -m pip install -e ".[all]"
 ```
 
 The core package uses NumPy and SciPy. `[plots]` adds Matplotlib and
-`[comparisons]` adds scikit-learn. The wheel included in `dist/` allows the core
-package to be installed without the source tree; models, examples, and results
-are included in the project ZIP archive.
+`[comparisons]` adds scikit-learn. The version 1.0.0 wheel in `dist/` installs the core package without the source
+tree. Older 0.1.0 distributions are retained as historical artifacts. Models,
+examples, and results are included in the repository and project ZIP archive.
 
 ## Training and Prediction
 
@@ -96,6 +96,20 @@ universal coverage for all future trajectories. Untruncated Gaussian noise has
 unbounded support and therefore does not admit a finite deterministic bound that
 contains all possible values.
 
+## Verify saved results without training
+
+To inspect the supplied models and data without running the optimizer:
+
+```bash
+python tools/verify_saved_results.py --results results/fresh_training
+python examples/predict_and_free_run.py --system-folder results/fresh_training/system1
+```
+
+The verification checks saved predictions, training-witness consistency, and
+generator caps. It does not call `fit` or recalibrate the intervals. The
+commands in the next section intentionally launch new training runs and are
+not needed to inspect the published results.
+
 ## Reproducing the Included Results
 
 The following command reproduces the computational budget used for the reported
@@ -129,14 +143,25 @@ The default API budget is 2000/3500; the reported experiment explicitly used
 
 A total of 2406 local consequent updates were performed across the six outputs.
 Joint feasibility and membership of the common witness in all 48 final
-zonotopes were verified numerically. Across 540 independent confirmation
-trajectories, there were **0 violations among 1,911,600 measured output
-values**, using excitation amplitudes 1.00/1.15/1.30 and bounded uniform-noise
-standard deviations 0.005/0.010/0.020. The mean interval width increased from
-0.386877 to 0.508028 after adding the explicit noise-propagation extension, an
-increase of 31.32%. These values correspond to prediction instants
-`k=30,...,1799`. The first 30 samples are used as initial history and are
-excluded from the reported prediction metrics.
+zonotopes were verified numerically. On the same 540 confirmation trajectories, the `validation` interval leaves
+**4 of 1,911,600 measured output values outside**, while the `noise` interval
+has **0 violations**. Conditions use excitation amplitudes 1.00/1.15/1.30 and
+bounded uniform-noise standard deviations 0.005/0.010/0.020. Phase and unit-noise
+realizations are paired across conditions; the 540 trajectories are not mutually
+independent. Their phase seeds are separate from those used for calibration.
+
+The mean physical interval width increases from 0.386877 to 0.508028 when the
+explicit current- and history-noise terms are included, an increase of 31.32%.
+The four validation violations all occur in System 3, output 1, at amplitude
+1.30 and noise standard deviation 0.020. The largest excess is 0.007779488.
+No model, margin, or calibration constant was adjusted after inspecting them.
+These values correspond to prediction instants `k=30,...,1799`; the first 30
+samples provide initial history and are excluded from prediction metrics.
+
+The archived experiment protocol identifies development version 0.1.0; those
+records are intentionally unchanged. Publication version 1.0.0 packages the
+same saved models and numerical study. Updating the release metadata does not
+constitute a new training run.
 
 The reduction procedure used the minimum-violation fallback in 653 of 712
 events. The complexity cap and outer inclusion are preserved, but the prescribed
@@ -164,6 +189,26 @@ The source code and reproducibility artifacts are publicly available at
 BSD 3-Clause License; see `LICENSE` and `NOTICE.md`. `CITATION.cff` contains
 software citation metadata for version 1.0.0. A software DOI will be added after
 the archived release is deposited and the DOI is issued.
+
+## Citation
+
+Please cite the software when using its implementation, saved models, or
+reproducibility artifacts. GitHub displays the citation metadata from
+[`CITATION.cff`](CITATION.cff). A compatible BibTeX entry is available in
+[`CITATION.bib`](CITATION.bib). State the software version and the exact commit
+used for a study; an archived DOI can be added when one has actually been
+issued. The repository does not currently declare a software DOI.
+
+```bibtex
+@misc{PerezPerezMANFIZ2026,
+  author = {Pérez-Pérez, Esvan-Jesús},
+  title = {MANFIZ: Multi-Output Adaptive Neuro-Fuzzy Inference with Zonotopic Consequents},
+  year = {2026},
+  howpublished = {GitHub software repository},
+  note = {Python software, version 1.0.0},
+  url = {https://github.com/esvandejesus/MANFIZ}
+}
+```
 
 ## Summary
 

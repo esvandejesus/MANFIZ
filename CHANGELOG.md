@@ -1,5 +1,15 @@
 # Changelog
 
+## Documentation and packaging corrections for 1.0.0
+
+- Match the public `manfiz.__version__` value and rebuilt distributions to the
+  version already declared in `pyproject.toml` and `CITATION.cff`.
+- Report all four validation-interval violations alongside zero noise-aware
+  violations, the 31.32% width increase, and the paired confirmation design.
+- Add a BibTeX citation and commands for inspecting the saved results without
+  fitting or recalibration.
+- Preserve the original experiment protocol, data, models, and source snapshot.
+
 ## 1.0.0
 
 First public release of the native Python MANFIZ toolbox.
@@ -17,7 +27,7 @@ First public release of the native Python MANFIZ toolbox.
 - Validation of dimensions, deterministic bounds, and count-valued configuration parameters.
 - Automated tests for geometry, causality, training, noise propagation, serialization, and MATLAB numerical-reference equivalence.
 - Reproducibility scripts for generator-budget sensitivity, quantile comparison, and saved-result verification.
-- Independent confirmation study covering 540 noisy trajectories and 1,911,600 measured output values with zero violations in the reported noise-aware setting.
+- Confirmation study with calibration-disjoint seeds and paired conditions, covering 540 noisy trajectories and 1,911,600 measured output values with zero violations in the reported noise-aware setting.
 - PNG/SVG figures, mathematical documentation, API documentation, and explicit reporting of optimization-budget termination for Systems 1 and 2.
 
 ## 0.1.0

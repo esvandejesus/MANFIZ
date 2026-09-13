@@ -1,6 +1,9 @@
 {
   "project": "manfiz-toolbox",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "based_on_commit": "e283f419ce45ef5f17311585de930153294aa1a2",
+  "scope": "Prepared repository snapshot; packaging and documentation corrections only; no new training or recalibration.",
+  "original_experiment_version": "0.1.0",
   "files": [
     {
       "path": ".github/workflows/tests.yml",
@@ -14,33 +17,38 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1225,
-      "sha256": "aa8d3b0b4435ff119cffd6d9533519301d60f98f5766fe014624b4053071aff7"
+      "bytes": 2210,
+      "sha256": "79aaf9b047d73731e1abaaeda605ef151c0aee10329023ab6610d44ecb62aa17"
+    },
+    {
+      "path": "CITATION.bib",
+      "bytes": 382,
+      "sha256": "8164f078032f66599b2b23802bf5be746387bdddce5674f531f693e58310d8e9"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 678,
-      "sha256": "3784a3d57c884f1eeb7eafd87ffe7e9a3d13be0013f2a1dc50eee4f4f82e84fb"
+      "bytes": 1011,
+      "sha256": "ea9735c3a5fb725a5ebedb105519908b79d18c563a1225c98eca54de913f8117"
     },
     {
-      "path": "Informe_Toolbox_Python_MANFIZ.pdf",
-      "bytes": 177940,
-      "sha256": "f0dd18c28896e83770999ca2fe83b07d4d6566166e64633c2f6aab31eb19190f"
+      "path": "LICENSE",
+      "bytes": 1534,
+      "sha256": "cb24b46d37b3558442c7a10c141eefc3eb7ed1d88b10163d8a045aa4dcef042f"
     },
     {
       "path": "MANIFEST.in",
-      "bytes": 249,
-      "sha256": "450fbcadadd6e7c08dd3e825ff39a41d8c261e019c5e5f9d6313f0258084c251"
+      "bytes": 270,
+      "sha256": "5a8e368bcb52b529020a98bc727c1378ac87e534f8fa08c01235bcb2ab55a261"
     },
     {
       "path": "NOTICE.md",
-      "bytes": 806,
-      "sha256": "94a92fab717bc369ed4d1099698b0c1f9ae888bb3c514bee97e0ab27be89664e"
+      "bytes": 1700,
+      "sha256": "48cc8879aa35cde5fa7b661174757be2eb8047a011c3bd8a13ef87b2a25baa76"
     },
     {
       "path": "README.md",
-      "bytes": 7992,
-      "sha256": "0b6d2abc59658501c70d3c1b6075226dcfa6a78a3b27c7d95243471928e737cc"
+      "bytes": 10294,
+      "sha256": "75cf3befe617e405ad31e418f5960929f439153d63064f0049cefbe9647330c7"
     },
     {
       "path": "configs/fresh_training.json",
@@ -56,6 +64,16 @@
       "path": "dist/manfiz_toolbox-0.1.0.tar.gz",
       "bytes": 197981,
       "sha256": "51abfd601f68315cffb269b992b7955a2d9d298c3a945874cb0d2618947c1d20"
+    },
+    {
+      "path": "dist/manfiz_toolbox-1.0.0-py3-none-any.whl",
+      "bytes": 36380,
+      "sha256": "c2839452f4ac37be021fe9acc029f5df02f404647eca9f6259e8bf96ed2dd2b4"
+    },
+    {
+      "path": "dist/manfiz_toolbox-1.0.0.tar.gz",
+      "bytes": 200689,
+      "sha256": "ebbb68c82b8620b97eaa3dcb5bdcc7f0129a537d3a88d864419d3c338d295e17"
     },
     {
       "path": "docs/api.md",
@@ -109,8 +127,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 828,
-      "sha256": "e6b68c7b1eddd5c83f8f593dd9bfa7a46f588450a135104098dc9915d1a1c88c"
+      "bytes": 1401,
+      "sha256": "1ae080c5ac68f1833f5ac50cac9c759e78285be9b88bfac0302a793639435886"
     },
     {
       "path": "requirements-reproduce.txt",
@@ -129,8 +147,8 @@
     },
     {
       "path": "results/budget_sensitivity/metrics.csv",
-      "bytes": 3286,
-      "sha256": "62c56d958b65efb0b02916ca12b0d71656068ea37e385516ffc47786e1048561"
+      "bytes": 3267,
+      "sha256": "b9f44983bb9a211d328b4d92187800079e7680e9f1b206036c97efcfc2350d0b"
     },
     {
       "path": "results/budget_sensitivity/protocol.json",
@@ -184,18 +202,18 @@
     },
     {
       "path": "results/fresh_training/clean_confirmation_metrics.csv",
-      "bytes": 51176,
-      "sha256": "80bd3c38eadff9c67a788b782e0d9b549b4dc7ba2ffb9cb82a07bc8d3c1dd6bb"
+      "bytes": 50815,
+      "sha256": "85508d0394b05cff64a3554fe39485f99d3a4ed48e8b1bd3fe6cffef31830b4a"
     },
     {
       "path": "results/fresh_training/coverage_metrics.csv",
-      "bytes": 349862,
-      "sha256": "59d707c85d5144c15b05fd7a17b0146ebae08d0a6bda2d7f0d66d7d138667f84"
+      "bytes": 347701,
+      "sha256": "fd63c07ab38a6864bc09218a0085f9ac9648d51cde91903e276eace01aac01d1"
     },
     {
       "path": "results/fresh_training/coverage_summary.csv",
-      "bytes": 42665,
-      "sha256": "8ebab660e4f0415646cb3b8102de5f94d91a2ed653c11652f382e6141b3ed2b8"
+      "bytes": 42556,
+      "sha256": "8c1dbb0048699d181ac95459311ce7840afde0bcf4cee9c0db29e0702fc0f244"
     },
     {
       "path": "results/fresh_training/executed_source.zip",
@@ -204,13 +222,13 @@
     },
     {
       "path": "results/fresh_training/free_run_metrics.csv",
-      "bytes": 2159,
-      "sha256": "efafdd0fa01abe5432cd5bef424a984f4ecd72b12da7a94962b76d3c91c91d6c"
+      "bytes": 2134,
+      "sha256": "19116ad15022eaad6a16dbe097bdc3f3cdc3bc5ec4f4ca3fbf22cf7acf16ee02"
     },
     {
       "path": "results/fresh_training/heldout_metrics.csv",
-      "bytes": 3898,
-      "sha256": "3700b8c5571738afd17278e6fa9e2be3d9f801267fdf3a44f8b16259c212e4de"
+      "bytes": 3873,
+      "sha256": "7ca108bc50f03502a242c5b447412c1d3b82fe36f9da9df741ddd06f789f1103"
     },
     {
       "path": "results/fresh_training/independent_verification.json",
@@ -254,8 +272,8 @@
     },
     {
       "path": "results/fresh_training/system1/optimizer_history.csv",
-      "bytes": 436775,
-      "sha256": "faa4893481e3ade700c781dd652f57841d87bb0885a223559ae7eb589229f6db"
+      "bytes": 429079,
+      "sha256": "b571a90f1f02247e12a9d751b09a0f98429b1b04da15d12edc683cfa391263d2"
     },
     {
       "path": "results/fresh_training/system1/training.png",
@@ -309,8 +327,8 @@
     },
     {
       "path": "results/fresh_training/system2/optimizer_history.csv",
-      "bytes": 411116,
-      "sha256": "65ba204d9833681066ae91c229a4e87163b9471906459681db58e581c4687d25"
+      "bytes": 403414,
+      "sha256": "418b25841dac6e4e274a4045275e967fbf0d4acedb9c5f5fa68a7989f445935f"
     },
     {
       "path": "results/fresh_training/system2/training.png",
@@ -364,8 +382,8 @@
     },
     {
       "path": "results/fresh_training/system3/optimizer_history.csv",
-      "bytes": 299086,
-      "sha256": "c3e8f100b8c8c549a39547955127bb6006b0ad15c938a70da8bcddab39607d52"
+      "bytes": 293502,
+      "sha256": "d30c0934872b5cd1d6c19d8870a054450a4f28a4d8814e947e1754dca1e5ce56"
     },
     {
       "path": "results/fresh_training/system3/training.png",
@@ -399,8 +417,8 @@
     },
     {
       "path": "results/fresh_training/trajectory_hashes.csv",
-      "bytes": 81886,
-      "sha256": "c2898b3d31bf7a57413be7a0b7fc93d64420b0b2a13a2559d6f7f82fac406e6f"
+      "bytes": 81165,
+      "sha256": "fc04087f301503fff494d1e15d9a191165d7a7f80e4a9c77a4387077910124e7"
     },
     {
       "path": "results/historical_sample_check.json",
@@ -434,8 +452,8 @@
     },
     {
       "path": "results/quantile_comparison/metrics.csv",
-      "bytes": 1321,
-      "sha256": "183a4aa0b751bd1e55fefc62ba94d01640b48a4339239b44d16bc69e79609683"
+      "bytes": 1314,
+      "sha256": "ccc2a84cc0044b89c10adb1251c927c030a5057a92088c6631793401f524aaf1"
     },
     {
       "path": "results/quantile_comparison/system1.npz",
@@ -455,7 +473,7 @@
     {
       "path": "src/manfiz/__init__.py",
       "bytes": 532,
-      "sha256": "c8cbf317f315b6d6dc2120377f6a4262d39a956b6f7f67d265e6f0e1df3510a9"
+      "sha256": "67dbcf821278c70403131b9715c6497276f8341403b895a2ff62950cac547f30"
     },
     {
       "path": "src/manfiz/baselines.py",
@@ -577,17 +595,5 @@
       "bytes": 3480,
       "sha256": "9c7e37c1ed02ca2a34a8ef10fed80087cf22906d928cacc609ce5a2f16fc645c"
     }
-  ],
-  "validation": {
-    "tests": 21,
-    "failures": 0,
-    "errors": 0,
-    "wheel_install_verified": true,
-    "fresh_full_training_systems": 3,
-    "noise_confirmation_trajectories": 540,
-    "noise_confirmation_violations": 0,
-    "pdf_pages": 3,
-    "pdf_visually_reviewed": true,
-    "contains_matlab_executables_or_mat_files": false
-  }
+  ]
 }
