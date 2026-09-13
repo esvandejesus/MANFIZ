@@ -1,17 +1,17 @@
 # MANFIZ Toolbox
 
-Identificación neurodifusa multisalida con consecuentes zonotópicos, implementada
-en Python. `MANFIZ.fit()` **entrena desde cero las premisas compartidas, los
-consecuentes nominales y los zonotopos de cada salida**. No requiere MATLAB,
-Octave, Fuzzy Logic Toolbox ni archivos `.mat`.
+Multi-output neuro-fuzzy identification with zonotopic consequents, implemented
+in Python. `MANFIZ.fit()` **trains the shared premises, nominal consequents, and
+the zonotopes for each output from scratch**. It does not require MATLAB,
+Octave, the Fuzzy Logic Toolbox, or `.mat` files.
 
-Esta versión contiene tres modelos recién entrenados, datos reproducibles,
-comparaciones, figuras y 21 pruebas automatizadas. El alcance es identificación
-y predicción por intervalos; no incluye esquemas de detección de fallas.
+This version includes three newly trained models, reproducible data,
+comparisons, figures, and 21 automated tests. Its scope is system identification
+and interval prediction; it does not include fault-detection schemes.
 
-## Instalar
+## Installation
 
-Requiere Python 3.10 o posterior. Desde la carpeta del proyecto:
+Python 3.10 or later is required. From the project directory:
 
 ```bash
 python -m venv .venv
@@ -20,11 +20,12 @@ python -m venv .venv
 python -m pip install -e ".[all]"
 ```
 
-El núcleo usa NumPy y SciPy. `[plots]` añade Matplotlib y `[comparisons]` añade
-scikit-learn. El wheel incluido en `dist/` permite instalar el núcleo sin el
-árbol de fuentes; los modelos, ejemplos y resultados están en el ZIP del proyecto.
+The core package uses NumPy and SciPy. `[plots]` adds Matplotlib and
+`[comparisons]` adds scikit-learn. The wheel included in `dist/` allows the core
+package to be installed without the source tree; models, examples, and results
+are included in the project ZIP archive.
 
-## Entrenar y predecir
+## Training and Prediction
 
 ```python
 import numpy as np
@@ -48,32 +49,33 @@ model.save("results/my_model.npz")
 loaded = MANFIZ.load("results/my_model.npz")
 ```
 
-`premise_columns` usa índices Python desde cero sobre **X**, la matriz de
-regresores. `sensor_bound` es una amplitud máxima determinista en unidades
-físicas. Una desviación estándar no es, por sí sola, una cota máxima.
+`premise_columns` uses zero-based Python indices over **X**, the regressor
+matrix. `sensor_bound` is a deterministic maximum amplitude expressed in
+physical units. A standard deviation is not, by itself, a maximum bound.
 
-Para datos propios: `examples/custom_data.py` recibe archivos NPZ con `u` de
-forma `(N, n_inputs)` e `y` de forma `(N, n_outputs)`, uno por experimento.
-Se necesitan al menos dos experimentos de entrenamiento con suficientes muestras
-para calibrar la forma del prior. Se conserva la separación entre experimentos
-al construir los retardos. El producto cartesiano de membresías crece
-exponencialmente con el número de variables de premisa.
+For custom data, `examples/custom_data.py` accepts NPZ files containing `u`
+with shape `(N, n_inputs)` and `y` with shape `(N, n_outputs)`, one file per
+experiment. At least two training experiments with enough samples are required
+to calibrate the prior shape. Experiment boundaries are preserved when lagged
+regressors are constructed. The Cartesian product of membership functions grows
+exponentially with the number of premise variables.
 
-## Intervalos que incluyen ruido
+## Noise-Aware Intervals
 
-Hay tres modos explícitos:
+Three explicit interval modes are available:
 
-| Modo | Radio añadido al centro MANFIZ |
+| Mode | Radius added around the MANFIZ center |
 |---|---|
-| `parameters` | Incertidumbre de los consecuentes |
-| `validation` | Radio paramétrico + caja residual de validación |
-| `noise` | Radio paramétrico + defecto limpio + ruido actual + propagación por los retardos |
+| `parameters` | Consequent-parameter uncertainty |
+| `validation` | Parameter radius + validation residual box |
+| `noise` | Parameter radius + clean-model defect + current noise + lagged-regressor noise propagation |
 
-Para `noise`, hay que congelar antes una envolvente limpia y cotas deterministas:
+For `noise`, a clean-output envelope and deterministic bounds must first be
+frozen:
 
 ```python
-# clean_cal es RegressionData obtenido de trayectorias sin ruido de calibración.
-# Debe estar separado de los datos de confirmación.
+# clean_cal is RegressionData obtained from noise-free calibration trajectories.
+# It must be kept separate from the confirmation data.
 b = np.sqrt(3) * 0.02
 bx = spec.regressor_noise_bounds(3, np.array([b, b]))
 model.calibrate_noise(clean_cal.X, clean_cal.y,
@@ -81,89 +83,95 @@ model.calibrate_noise(clean_cal.X, clean_cal.y,
 interval = model.predict_interval(test.X, mode="noise")
 ```
 
-Este bloque ilustra la API; el experimento completo que genera `clean_cal` y
-mantiene la separación de datos está implementado en `manfiz-benchmark`.
-Las variables de premisa deben estar libres de ruido para esta extensión.
-En datos reales, una trayectoria limpia o una envolvente limpia válida requiere
-justificación independiente; la toolbox no la deduce de las mediciones ruidosas.
+This block illustrates the API; the complete experiment that generates
+`clean_cal` while preserving data separation is implemented in
+`manfiz-benchmark`. Premise variables must be noise-free for this extension.
+For real-world data, a clean trajectory or a valid clean-output envelope
+requires independent justification; the toolbox does not infer it from noisy
+measurements.
 
-**La cobertura de todos los ruidos acotados es condicional a que la envolvente
-limpia sea válida.** Un estudio finito sin violaciones no demuestra cobertura
-universal de trayectorias futuras. Un ruido gaussiano sin recorte tiene soporte
-no acotado y no admite una cota determinista finita que incluya todos sus valores.
+**Coverage of all bounded-noise realizations is conditional on the validity of
+the clean-output envelope.** A finite study with no violations does not prove
+universal coverage for all future trajectories. Untruncated Gaussian noise has
+unbounded support and therefore does not admit a finite deterministic bound that
+contains all possible values.
 
-## Reproducir los resultados incluidos
+## Reproducing the Included Results
 
-El comando siguiente reproduce el presupuesto utilizado en la entrega. Use una
-carpeta nueva: el programa protege los experimentos existentes.
+The following command reproduces the computational budget used for the reported
+study. Use a new output directory because the program protects existing
+experiments.
 
 ```bash
-# Linux/macOS: fija los hilos para reducir la variación en los tiempos.
+# Linux/macOS: fix the thread count to reduce timing variability.
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 manfiz-benchmark \
   --output results/my_run --max-iter 6000 --max-evaluations 10000
 
-# Después, sobre los modelos recién entrenados:
+# Then run the following on the newly trained models:
 python examples/budget_sensitivity.py --results results/my_run
 python examples/quantile_comparison.py --results results/my_run
 python tools/verify_saved_results.py --results results/my_run
 python -m unittest discover -s tests -v
 ```
 
-En Windows, establezca `$env:OPENBLAS_NUM_THREADS="1"` y
-`$env:OMP_NUM_THREADS="1"`, y ejecute el comando `manfiz-benchmark` en una línea.
-El presupuesto predeterminado de la API es 2000/3500; el experimento entregado
-lo amplió explícitamente a 6000/10000. Las semillas están en `protocol.json`.
+On Windows, set `$env:OPENBLAS_NUM_THREADS="1"` and
+`$env:OMP_NUM_THREADS="1"`, then run `manfiz-benchmark` on a single line.
+The default API budget is 2000/3500; the reported experiment explicitly used
+6000/10000. Random seeds are stored in `protocol.json`.
 
-## Resultados nuevos de esta entrega
+## Results from the Current Release
 
-| Sistema | Iteraciones | Reducción de la función objetivo | Terminación |
+| System | Iterations | Objective-function reduction | Termination |
 |---|---:|---:|---|
-| 1 | 6000 | 5,79 % | Límite de iteraciones |
-| 2 | 6000 | 24,44 % | Límite de iteraciones |
-| 3 | 4286 | 6,44 % | Convergencia numérica |
+| 1 | 6000 | 5.79% | Iteration limit |
+| 2 | 6000 | 24.44% | Iteration limit |
+| 3 | 4286 | 6.44% | Numerical convergence |
 
-Se efectuaron 2406 actualizaciones locales de consecuentes entre las seis
-salidas. La factibilidad conjunta y la pertenencia del testigo a los 48 zonotopos
-finales se verificaron numéricamente. En 540 trayectorias de confirmación hubo
-**0 violaciones entre 1.911.600 valores medidos**, con amplitudes 1,00/1,15/1,30
-y desviaciones de ruido uniforme 0,005/0,010/0,020. La anchura media pasó de
-0,386877 a 0,508028 al añadir la extensión de ruido, un aumento de 31,32 %.
-Estos valores corresponden a los instantes con predicción, `k=30,...,1799`.
-Los primeros 30 instantes se usan como historia inicial y descarte.
+A total of 2406 local consequent updates were performed across the six outputs.
+Joint feasibility and membership of the common witness in all 48 final
+zonotopes were verified numerically. Across 540 independent confirmation
+trajectories, there were **0 violations among 1,911,600 measured output
+values**, using excitation amplitudes 1.00/1.15/1.30 and bounded uniform-noise
+standard deviations 0.005/0.010/0.020. The mean interval width increased from
+0.386877 to 0.508028 after adding the explicit noise-propagation extension, an
+increase of 31.32%. These values correspond to prediction instants
+`k=30,...,1799`. The first 30 samples are used as initial history and are
+excluded from the reported prediction metrics.
 
-La reducción utilizó la alternativa de mínima violación en 653 de 712 eventos:
-el límite de complejidad y la inclusión externa se conservan, pero los umbrales
-de inflación/contracción no se garantizan en esos eventos. Los archivos de
-resultados registran estas situaciones, no las ocultan.
+The reduction procedure used the minimum-violation fallback in 653 of 712
+events. The complexity cap and outer inclusion are preserved, but the prescribed
+inflation/contraction thresholds are not guaranteed in those fallback events.
+The result files record these events explicitly.
 
-## Archivos y documentación
+## Files and Documentation
 
-| Ruta | Contenido |
+| Path | Contents |
 |---|---|
-| `src/manfiz/` | API y algoritmos reutilizables |
-| `examples/` | Entrenamiento, datos propios, presupuestos, cuantiles y simulación libre |
-| `tests/` | Verificaciones de geometría, causalidad, entrenamiento, ruido y equivalencia |
-| `results/fresh_training/` | Tres modelos nuevos, datos, semillas, trazas, métricas y figuras |
-| `results/budget_sensitivity/` | Nueve ajustes de consecuentes con premisas nuevas compartidas |
-| `results/quantile_comparison/` | Comparación por cuantiles con las mismas características |
-| `docs/mathematics.md` | Ecuaciones, variables, supuestos y límites |
-| `docs/api.md` | Parámetros y uso de la API |
-| `docs/matlab_mapping.md` | Correspondencia funcional MATLAB/Python |
-| `docs/reproducibility.md` | Protocolo, versiones, semillas y comandos |
-| `docs/training_report.md` | Informe de hallazgos y correcciones con resultados nuevos |
+| `src/manfiz/` | Reusable API and algorithms |
+| `examples/` | Training, custom data, budget studies, quantile comparison, and free-run simulation |
+| `tests/` | Geometry, causality, training, noise, and equivalence checks |
+| `results/fresh_training/` | Three newly trained models, data, seeds, traces, metrics, and figures |
+| `results/budget_sensitivity/` | Nine consequent fits using newly trained shared premises |
+| `results/quantile_comparison/` | Quantile-based comparison using the same features |
+| `docs/mathematics.md` | Equations, variables, assumptions, and limitations |
+| `docs/api.md` | API parameters and usage |
+| `docs/matlab_mapping.md` | MATLAB/Python functional correspondence |
+| `docs/reproducibility.md` | Protocol, versions, seeds, and commands |
+| `docs/training_report.md` | Findings, corrections, and results from the new training runs |
 
-El código y los resultados están preparados para cargarlos a un repositorio;
-no se ha publicado ningún repositorio ni paquete. La licencia de publicación
-queda por definir por el autor; véase `NOTICE.md`. `CITATION.cff` contiene la
-autoría del manuscrito suministrado sin inventar DOI ni URL.
+The code and results are prepared for public repository distribution.
+The publication license is defined by the author; see `NOTICE.md`.
+`CITATION.cff` contains the manuscript authorship information without inventing
+a DOI or repository URL.
 
-## English overview
+## Summary
 
 MANFIZ is a native Python research toolbox for shared-premise multi-output
 neuro-fuzzy identification with zonotopic consequents. The full `fit` call
 initializes and optimizes the premises, refits nominal affine coefficients,
-calibrates a joint feasible training bound and fits the local zonotopes. It
-supports bounded-noise one-step intervals, saved models and recursive center
-simulation. The supplied study is freshly trained, not a replay of MATLAB
-parameters. Coverage claims are conditional on a valid clean-output envelope;
-see the equations and limitations in `docs/mathematics.md`.
+calibrates a jointly feasible bounded regression-error model, and fits the local
+zonotopes. It supports bounded-noise one-step interval prediction, model
+serialization, and recursive center simulation. The supplied study is freshly
+trained and is not a replay of MATLAB parameters. Coverage claims are
+conditional on a valid clean-output envelope; see the equations and limitations
+in `docs/mathematics.md`.
