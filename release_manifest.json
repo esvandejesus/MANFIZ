@@ -1,0 +1,593 @@
+{
+  "project": "manfiz-toolbox",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 476,
+      "sha256": "72889adc1352dfc48c69f79e3219b9952ac1ccf2ac15c6b739dd63bb4f9e4f77"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 121,
+      "sha256": "b96d63e3a695a9e7b09669dd05b4d8710b389051e265a432f83b9cf4d46fae97"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1225,
+      "sha256": "aa8d3b0b4435ff119cffd6d9533519301d60f98f5766fe014624b4053071aff7"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 678,
+      "sha256": "3784a3d57c884f1eeb7eafd87ffe7e9a3d13be0013f2a1dc50eee4f4f82e84fb"
+    },
+    {
+      "path": "Informe_Toolbox_Python_MANFIZ.pdf",
+      "bytes": 177940,
+      "sha256": "f0dd18c28896e83770999ca2fe83b07d4d6566166e64633c2f6aab31eb19190f"
+    },
+    {
+      "path": "MANIFEST.in",
+      "bytes": 249,
+      "sha256": "450fbcadadd6e7c08dd3e825ff39a41d8c261e019c5e5f9d6313f0258084c251"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 806,
+      "sha256": "94a92fab717bc369ed4d1099698b0c1f9ae888bb3c514bee97e0ab27be89664e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7992,
+      "sha256": "0b6d2abc59658501c70d3c1b6075226dcfa6a78a3b27c7d95243471928e737cc"
+    },
+    {
+      "path": "configs/fresh_training.json",
+      "bytes": 775,
+      "sha256": "53e706ee6080d3b813aa12275ecbdb2ccd33e5da4224487128e7c52478cd4dbf"
+    },
+    {
+      "path": "dist/manfiz_toolbox-0.1.0-py3-none-any.whl",
+      "bytes": 34063,
+      "sha256": "2cb682b5bfdf8f214962b8e34dd08020109296e03c7f35475d482daaa79de4f7"
+    },
+    {
+      "path": "dist/manfiz_toolbox-0.1.0.tar.gz",
+      "bytes": 197981,
+      "sha256": "51abfd601f68315cffb269b992b7955a2d9d298c3a945874cb0d2618947c1d20"
+    },
+    {
+      "path": "docs/api.md",
+      "bytes": 6331,
+      "sha256": "ace8891a7f190336281f757d7abf003d00278be9218a7dd10d4d3fe4f4215322"
+    },
+    {
+      "path": "docs/mathematics.md",
+      "bytes": 11317,
+      "sha256": "2e84a0fbc902e48bd79415f6a0ca849663cb6850e3f761d29ec93ca9586d6a03"
+    },
+    {
+      "path": "docs/matlab_mapping.md",
+      "bytes": 4569,
+      "sha256": "dadddc58bf9dd9ab3c6a9a8883a95fde590da8a003cb23d35db10432778c2dc5"
+    },
+    {
+      "path": "docs/reproducibility.md",
+      "bytes": 5925,
+      "sha256": "33b78530fc167cd5c7b964337e5f87300f37fe6c6268a735ef12f6323b601716"
+    },
+    {
+      "path": "docs/training_report.md",
+      "bytes": 7666,
+      "sha256": "1d42bc147d72586043095aa2a091df35eb3f9e41f1b8cd5de1a479ec8562c2c6"
+    },
+    {
+      "path": "examples/budget_sensitivity.py",
+      "bytes": 2632,
+      "sha256": "0415525dcdd83ff0bc5b3abc0c8d082d9a3e8b40f4afc2c2bdd45f38af040ca4"
+    },
+    {
+      "path": "examples/custom_data.py",
+      "bytes": 1465,
+      "sha256": "ba56f647b898e02389742721fb9288d6a1bc7b31a43d5f94c4ecf5c4ef6f2925"
+    },
+    {
+      "path": "examples/predict_and_free_run.py",
+      "bytes": 944,
+      "sha256": "c2996d64cc5bea351e2f07238f9535eb716f22cc364a4684b9468b416efa1e00"
+    },
+    {
+      "path": "examples/quantile_comparison.py",
+      "bytes": 1603,
+      "sha256": "2d8f92d5b2cc6d30c17f3346aec2f420d7880069746dd732903ddfb624c7fc56"
+    },
+    {
+      "path": "examples/train_from_scratch.py",
+      "bytes": 1318,
+      "sha256": "8cca63462efc700e248ecff1ba74ebc4dac6321391aab054302f09a63d9aa8ff"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 828,
+      "sha256": "e6b68c7b1eddd5c83f8f593dd9bfa7a46f588450a135104098dc9915d1a1c88c"
+    },
+    {
+      "path": "requirements-reproduce.txt",
+      "bytes": 66,
+      "sha256": "4f665a97ac513de79b03a453429b7b28831e44bb58f14a7d6e689a7451e9a9b5"
+    },
+    {
+      "path": "results/budget_sensitivity/budget_sensitivity.png",
+      "bytes": 209171,
+      "sha256": "15e5618ac2af7406c21d7c93f1338ef67aff0c4d30cc5e87e1a00319ba811a3e"
+    },
+    {
+      "path": "results/budget_sensitivity/budget_sensitivity.svg",
+      "bytes": 86129,
+      "sha256": "beec6c26dbb6db148f9a4fa0ae894b13bd80f5c55f4169f474df5947d1c9c552"
+    },
+    {
+      "path": "results/budget_sensitivity/metrics.csv",
+      "bytes": 3286,
+      "sha256": "62c56d958b65efb0b02916ca12b0d71656068ea37e385516ffc47786e1048561"
+    },
+    {
+      "path": "results/budget_sensitivity/protocol.json",
+      "bytes": 267,
+      "sha256": "f2ba4aaf6a79b90ac349f054268499041e239b23066ce6fdec44b7b5c9a36117"
+    },
+    {
+      "path": "results/budget_sensitivity/system1_q1000.npz",
+      "bytes": 1065083,
+      "sha256": "c87fb1d0a52259a66dc2f96a353348c887edd3825f8ec8b11299b4b0e1ecbecb"
+    },
+    {
+      "path": "results/budget_sensitivity/system1_q1200.npz",
+      "bytes": 1130509,
+      "sha256": "550d72f69b973ed56b89ca38ccd0283c735f06e6117988a02a9ef5e243773737"
+    },
+    {
+      "path": "results/budget_sensitivity/system1_q800.npz",
+      "bytes": 978956,
+      "sha256": "69071cfab42e8cd960e5651bfad740a9c6e4665937c3eab68e05a996efadebc6"
+    },
+    {
+      "path": "results/budget_sensitivity/system2_q1000.npz",
+      "bytes": 1090319,
+      "sha256": "948621c6b310f5a84862490e2e7b5d2f722274e76b0508734e5d29ae7ecb55b8"
+    },
+    {
+      "path": "results/budget_sensitivity/system2_q1200.npz",
+      "bytes": 1162129,
+      "sha256": "46476ecfa297bea65a10e56123deb48a95b35fa3e72c472b48de0479773221fa"
+    },
+    {
+      "path": "results/budget_sensitivity/system2_q800.npz",
+      "bytes": 966296,
+      "sha256": "dd27a8209fbdc5c468d8d8b7300680a7c6d528a31542bbaaf4c981eb531ece6e"
+    },
+    {
+      "path": "results/budget_sensitivity/system3_q1000.npz",
+      "bytes": 1002589,
+      "sha256": "2a06c95e4653dae911d2f1f8afc0384ad3c2ab8bccf8f9b718c45820c3add1ad"
+    },
+    {
+      "path": "results/budget_sensitivity/system3_q1200.npz",
+      "bytes": 1119927,
+      "sha256": "36f85b21ec237df784eece2496e26d035e04dec8ef97bc033d68c986d50047f0"
+    },
+    {
+      "path": "results/budget_sensitivity/system3_q800.npz",
+      "bytes": 871233,
+      "sha256": "c70655518246908dbfdf311451fbbcc76af371371e0fd015bcffa25b96c96463"
+    },
+    {
+      "path": "results/fresh_training/clean_confirmation_metrics.csv",
+      "bytes": 51176,
+      "sha256": "80bd3c38eadff9c67a788b782e0d9b549b4dc7ba2ffb9cb82a07bc8d3c1dd6bb"
+    },
+    {
+      "path": "results/fresh_training/coverage_metrics.csv",
+      "bytes": 349862,
+      "sha256": "59d707c85d5144c15b05fd7a17b0146ebae08d0a6bda2d7f0d66d7d138667f84"
+    },
+    {
+      "path": "results/fresh_training/coverage_summary.csv",
+      "bytes": 42665,
+      "sha256": "8ebab660e4f0415646cb3b8102de5f94d91a2ed653c11652f382e6141b3ed2b8"
+    },
+    {
+      "path": "results/fresh_training/executed_source.zip",
+      "bytes": 25411,
+      "sha256": "4d8e28a87df31fe266283df8b99fb71c07e21d5929794730e97f613c7bac6427"
+    },
+    {
+      "path": "results/fresh_training/free_run_metrics.csv",
+      "bytes": 2159,
+      "sha256": "efafdd0fa01abe5432cd5bef424a984f4ecd72b12da7a94962b76d3c91c91d6c"
+    },
+    {
+      "path": "results/fresh_training/heldout_metrics.csv",
+      "bytes": 3898,
+      "sha256": "3700b8c5571738afd17278e6fa9e2be3d9f801267fdf3a44f8b16259c212e4de"
+    },
+    {
+      "path": "results/fresh_training/independent_verification.json",
+      "bytes": 2038,
+      "sha256": "9a8578668f3be0a380cdf6f64faa33ea9aac120d6e7b744c220b1863e051481d"
+    },
+    {
+      "path": "results/fresh_training/protocol.json",
+      "bytes": 3167,
+      "sha256": "bfb3a943cbd0799302d94d7562edbde613a293a20535bbaf8a21118e71a30851"
+    },
+    {
+      "path": "results/fresh_training/summary.json",
+      "bytes": 532,
+      "sha256": "9f2b0e421b3b13c38b4b69f9e10574f7cb24fa1b4c675bafd96a2b90531e77a5"
+    },
+    {
+      "path": "results/fresh_training/system1/datasets.npz",
+      "bytes": 461397,
+      "sha256": "74bfc1783341f3a5c79285173a55714264fe32c8d106e2cdb57d0b38bdb25c98"
+    },
+    {
+      "path": "results/fresh_training/system1/heldout_predictions.npz",
+      "bytes": 153329,
+      "sha256": "a7a35958a6021ce018b3f806558a4f542bd1a311c51cd6aa716963222d810aca"
+    },
+    {
+      "path": "results/fresh_training/system1/intervals.png",
+      "bytes": 389617,
+      "sha256": "9c54c23e580fa67756457678d34c14c47e0368dbe39a432869291d87966c9939"
+    },
+    {
+      "path": "results/fresh_training/system1/intervals.svg",
+      "bytes": 372462,
+      "sha256": "09a0a48c325f714fc4ed72b93368edf467aa22b86737ebdf5241d524e748e624"
+    },
+    {
+      "path": "results/fresh_training/system1/model.npz",
+      "bytes": 1065353,
+      "sha256": "36c5932d3fb05480cd0111e211fcd3d4dcc85a3105a5fffda3838633b264644c"
+    },
+    {
+      "path": "results/fresh_training/system1/optimizer_history.csv",
+      "bytes": 436775,
+      "sha256": "faa4893481e3ade700c781dd652f57841d87bb0885a223559ae7eb589229f6db"
+    },
+    {
+      "path": "results/fresh_training/system1/training.png",
+      "bytes": 66778,
+      "sha256": "9efc9e69ce502619f23549cf3370267f3149d4519517073277170c00ea4fabf6"
+    },
+    {
+      "path": "results/fresh_training/system1/training.svg",
+      "bytes": 63535,
+      "sha256": "5ab938f095fddac1fd1fa75b7a4680fa9b63a995c795f2b3e00f889ab0c5d709"
+    },
+    {
+      "path": "results/fresh_training/system1/training_report.json",
+      "bytes": 2094,
+      "sha256": "86972c8a104abb4ba4b3d0f8f51ef7577ec0d3a5d9b251c4a5992aa9f92a6d00"
+    },
+    {
+      "path": "results/fresh_training/system1/updates_y1.json",
+      "bytes": 297948,
+      "sha256": "7d697bc071f7cc54d35feb234704c46312a3ed58d639d8d63a18e7a3ac995d52"
+    },
+    {
+      "path": "results/fresh_training/system1/updates_y2.json",
+      "bytes": 298093,
+      "sha256": "78f6f0d8dd94f91a0b2d1e8fd39c43e74ea6d0944b503a5d5c70557b3d889ec9"
+    },
+    {
+      "path": "results/fresh_training/system2/datasets.npz",
+      "bytes": 461060,
+      "sha256": "d91c184e103d9d209af9911997ba520d3a92dd2939bb842ef15f8de481d2436f"
+    },
+    {
+      "path": "results/fresh_training/system2/heldout_predictions.npz",
+      "bytes": 153234,
+      "sha256": "989d365697f250da0bdb0dcee839e53042694a33be7bf3daf56b594f184e33a0"
+    },
+    {
+      "path": "results/fresh_training/system2/intervals.png",
+      "bytes": 388474,
+      "sha256": "7b95c6c2e349eb119ef770eab8c60eb18356cf5e753e2682141b850d794bcaf2"
+    },
+    {
+      "path": "results/fresh_training/system2/intervals.svg",
+      "bytes": 377272,
+      "sha256": "c3682aefe183d267ffd6e93f703de7b1a07f9a9c8c1f3f19af72ba4ecd0b5a6c"
+    },
+    {
+      "path": "results/fresh_training/system2/model.npz",
+      "bytes": 1090487,
+      "sha256": "cefff54310a5e255424392bb8e54042f13d8a568fdeacca6a124de9be25e5490"
+    },
+    {
+      "path": "results/fresh_training/system2/optimizer_history.csv",
+      "bytes": 411116,
+      "sha256": "65ba204d9833681066ae91c229a4e87163b9471906459681db58e581c4687d25"
+    },
+    {
+      "path": "results/fresh_training/system2/training.png",
+      "bytes": 67946,
+      "sha256": "86f7a9861d142d31d9afcc1c79d685dac23a2d883b07b2aeaa94a71d53922901"
+    },
+    {
+      "path": "results/fresh_training/system2/training.svg",
+      "bytes": 61643,
+      "sha256": "d05ada77f7083bc67c8d3809ccd06dec3f82a9c0245fa41a3ec39db867f3b72c"
+    },
+    {
+      "path": "results/fresh_training/system2/training_report.json",
+      "bytes": 2120,
+      "sha256": "8f7ecdcc8450ac0cb0f0c923ff015ae7ee4922039fb0c09892d78e89ded4a3ae"
+    },
+    {
+      "path": "results/fresh_training/system2/updates_y1.json",
+      "bytes": 298986,
+      "sha256": "7dbd7963fd622b9107163413e29e2da30c22ecffdbcf191564b3a84f2a46ae07"
+    },
+    {
+      "path": "results/fresh_training/system2/updates_y2.json",
+      "bytes": 298867,
+      "sha256": "b282ba69de5354798d1523fe904b0761cc1011c7d9e8ec60ab8855937fe284ac"
+    },
+    {
+      "path": "results/fresh_training/system3/datasets.npz",
+      "bytes": 464120,
+      "sha256": "259601a3d9f3d8a8c34a95eb9a7f299aa6a27f5fb943aa804ff41bae587f8985"
+    },
+    {
+      "path": "results/fresh_training/system3/heldout_predictions.npz",
+      "bytes": 153164,
+      "sha256": "05ac6743c7a94ed3ef0f705963ff8433ad0bd8b454eaa04572a1af62a1c49553"
+    },
+    {
+      "path": "results/fresh_training/system3/intervals.png",
+      "bytes": 384805,
+      "sha256": "f5dcb29f75e90061f2f56f48a512eb273656dca7089cae2f02d9c3c2c5c1c883"
+    },
+    {
+      "path": "results/fresh_training/system3/intervals.svg",
+      "bytes": 374262,
+      "sha256": "678d27eac106a99d2343a096977f4b4fbcac26897569245f8c5a231fb15c86e2"
+    },
+    {
+      "path": "results/fresh_training/system3/model.npz",
+      "bytes": 1002967,
+      "sha256": "99cc75ca772407c31cbb08381096de5fbc396304606687697c6aeb64af119a67"
+    },
+    {
+      "path": "results/fresh_training/system3/optimizer_history.csv",
+      "bytes": 299086,
+      "sha256": "c3e8f100b8c8c549a39547955127bb6006b0ad15c938a70da8bcddab39607d52"
+    },
+    {
+      "path": "results/fresh_training/system3/training.png",
+      "bytes": 70714,
+      "sha256": "bb760a498a1e9f8cff9f54558e6313a392818173ffa0b9360132e507a656ebc0"
+    },
+    {
+      "path": "results/fresh_training/system3/training.svg",
+      "bytes": 72503,
+      "sha256": "7067b429d95651049574d8a1cfbb8c77515c5bda309cbce6452a2149a815d9c6"
+    },
+    {
+      "path": "results/fresh_training/system3/training_report.json",
+      "bytes": 2109,
+      "sha256": "c6028dc3d32f4a6ff8c2abbbd26416e81670443c91292fa09c5d7f2d72c912e8"
+    },
+    {
+      "path": "results/fresh_training/system3/updates_y1.json",
+      "bytes": 286496,
+      "sha256": "8daf1e496a595e3a29f3578216019f7d5a83f77b66dd634f216e9889a12aad1b"
+    },
+    {
+      "path": "results/fresh_training/system3/updates_y2.json",
+      "bytes": 286517,
+      "sha256": "717549efcc851016910fa98757a3f7bc1bbae1c49357e0126092f6f49292052d"
+    },
+    {
+      "path": "results/fresh_training/training_report.json",
+      "bytes": 6863,
+      "sha256": "55868f7ed64c2e62302caf0478d69b2b466a37450b42e09963950f767689dd23"
+    },
+    {
+      "path": "results/fresh_training/trajectory_hashes.csv",
+      "bytes": 81886,
+      "sha256": "c2898b3d31bf7a57413be7a0b7fc93d64420b0b2a13a2559d6f7f82fac406e6f"
+    },
+    {
+      "path": "results/historical_sample_check.json",
+      "bytes": 515,
+      "sha256": "1942a2dfb5ea65f849786891b7a0ca5c611b0c7fbea66a2c263c433455b216d7"
+    },
+    {
+      "path": "results/historical_sample_check.png",
+      "bytes": 115272,
+      "sha256": "70575203b3cb7b53f6c8204fc590c853b83cb6585c7aa4fb601a559d870678a0"
+    },
+    {
+      "path": "results/historical_sample_check.svg",
+      "bytes": 46126,
+      "sha256": "47af13daef8cf5f2e050d258bed8d2e928edced30c69bd542aa5712839fcce40"
+    },
+    {
+      "path": "results/installation_verification.json",
+      "bytes": 449,
+      "sha256": "8d4792dac29fe18329d74ad0f4a44e3bf9dd77cbfc6a40e9469724f395f0ff42"
+    },
+    {
+      "path": "results/installed_test_log.txt",
+      "bytes": 2928,
+      "sha256": "86fbc7e70a08df2115e388a9ef10744d1897be02914a5ba3a1533d8f1195443a"
+    },
+    {
+      "path": "results/matlab_equivalence.json",
+      "bytes": 1189,
+      "sha256": "ab619b25100f9bd2ba451c56358fb03183889b7b2e30ed17c634d58d6ab02d41"
+    },
+    {
+      "path": "results/quantile_comparison/metrics.csv",
+      "bytes": 1321,
+      "sha256": "183a4aa0b751bd1e55fefc62ba94d01640b48a4339239b44d16bc69e79609683"
+    },
+    {
+      "path": "results/quantile_comparison/system1.npz",
+      "bytes": 56684,
+      "sha256": "1cf7789e6a59249cbdcb7aee53927da6abec5a249c2ceddacb87d4f2a57a6518"
+    },
+    {
+      "path": "results/quantile_comparison/system2.npz",
+      "bytes": 56829,
+      "sha256": "11c93414024673160c9f6b972abdcc491d1fbcfb49e8fa74aeef60431c14ba1f"
+    },
+    {
+      "path": "results/quantile_comparison/system3.npz",
+      "bytes": 56561,
+      "sha256": "271762fdc4a95c6e85a6ffe9fffa50e80b68076fa39710658e99084ba2d4c1b4"
+    },
+    {
+      "path": "src/manfiz/__init__.py",
+      "bytes": 532,
+      "sha256": "c8cbf317f315b6d6dc2120377f6a4262d39a956b6f7f67d265e6f0e1df3510a9"
+    },
+    {
+      "path": "src/manfiz/baselines.py",
+      "bytes": 2775,
+      "sha256": "19d69094bb064f87a8b7a78339ad3029f483e668f4ba43876e961621a452a82e"
+    },
+    {
+      "path": "src/manfiz/benchmarks.py",
+      "bytes": 3962,
+      "sha256": "d1d7e94dc2955d6188f63536cf839791f1e271eccca88110d2eb5f2e4907ff8a"
+    },
+    {
+      "path": "src/manfiz/calibration.py",
+      "bytes": 5575,
+      "sha256": "096e1f7e59df80449f6c14d3916aff516b07b5735c0e053583a28645f6c526d4"
+    },
+    {
+      "path": "src/manfiz/cli.py",
+      "bytes": 13754,
+      "sha256": "0828213c85c64a66f728f32128c4e4f644c846cc5732c663023e9165ff294fcf"
+    },
+    {
+      "path": "src/manfiz/config.py",
+      "bytes": 4417,
+      "sha256": "9229f27fd66e04c56837fdb88ec9b14bfc1120f294aeadcfb016d88f1c9594ed"
+    },
+    {
+      "path": "src/manfiz/data.py",
+      "bytes": 4880,
+      "sha256": "322dce9a4d3e74939745b7c2266d1229f4422f9a13022b3c2476e33666265f61"
+    },
+    {
+      "path": "src/manfiz/estimator.py",
+      "bytes": 17945,
+      "sha256": "54c82daf68fbc6c757afc1853884904cd812df2a67b0da041934307214a43b06"
+    },
+    {
+      "path": "src/manfiz/io.py",
+      "bytes": 1241,
+      "sha256": "5db1aac16974b5d6b74e31cb6b8c27609249c283c008f87e70a417d0d193db88"
+    },
+    {
+      "path": "src/manfiz/metrics.py",
+      "bytes": 1341,
+      "sha256": "fc6fa540273d96f15cceffc8d92917dd528ad2ceeb18c92e01ab93e677f9d05e"
+    },
+    {
+      "path": "src/manfiz/plotting.py",
+      "bytes": 3948,
+      "sha256": "a48b5b5832111a5adaed35392bd786961b40383e12bf3cf6a838898711e474f1"
+    },
+    {
+      "path": "src/manfiz/premises.py",
+      "bytes": 6173,
+      "sha256": "a18cf4cbe4a391dfc3b30bee554a123b8495b63222b231477c4ee7f6f5d4bd20"
+    },
+    {
+      "path": "src/manfiz/recursion.py",
+      "bytes": 4084,
+      "sha256": "feae6b0e30fbd761c202a98676b0ea45bb5e5a51cd29d71926f78ac64365f5f0"
+    },
+    {
+      "path": "src/manfiz/zonotopes.py",
+      "bytes": 6908,
+      "sha256": "d4d2c583663fa658b2f98d1bb2151a41ea8bb87857beb9254957db687be50b2e"
+    },
+    {
+      "path": "tests/fixtures/matlab_reference.npz",
+      "bytes": 143742,
+      "sha256": "547b7bb84e1af1c532876ce513a8377b0aa272edb75c68f14f0a77c5288595d6"
+    },
+    {
+      "path": "tests/fixtures/provenance.json",
+      "bytes": 1334,
+      "sha256": "378f0b438a1d33d184374d8a59b0a78834aac1e6a8d9bf25f12d7ec8589be8dc"
+    },
+    {
+      "path": "tests/test_configuration.py",
+      "bytes": 1042,
+      "sha256": "58643e4ea4df94f3f151e5411b1ee2ceab4f6feb4651edcf72829f8db3a6097c"
+    },
+    {
+      "path": "tests/test_data.py",
+      "bytes": 2896,
+      "sha256": "a332e4080cf7b889dd140a4e5b041be5b2ed522339fea76632e966f26704a6c7"
+    },
+    {
+      "path": "tests/test_estimator.py",
+      "bytes": 5056,
+      "sha256": "dd5b874923404d4fe01ce0635025689cea45c48e632abdc9012b43e0ce3ec1e8"
+    },
+    {
+      "path": "tests/test_geometry.py",
+      "bytes": 3901,
+      "sha256": "6670a748b5f143dad6629503c3ae78ea4ceabe767ee56e6e80a45fa0aa7a4f52"
+    },
+    {
+      "path": "tests/test_matlab_reference.py",
+      "bytes": 1261,
+      "sha256": "e6fc74b2008228d198c8c9db53ac8a02df68b3e62f34bea40c1797dd8e90ec27"
+    },
+    {
+      "path": "tools/check_historical_sample.py",
+      "bytes": 2266,
+      "sha256": "f1dc081bf6738be3f8cdcc4fdf28f44c8a028515e18d008e4bad5e305ff6c191"
+    },
+    {
+      "path": "tools/create_report.py",
+      "bytes": 20329,
+      "sha256": "854633dd9c65b949d36b5942e57b5f249343c97b7d9aff37840391094a33a3ed"
+    },
+    {
+      "path": "tools/summarize_results.py",
+      "bytes": 1775,
+      "sha256": "e90fef3a8087d7ecc5c50318271839747ffbe9ef33f16d39990af5d62b1bae45"
+    },
+    {
+      "path": "tools/verify_saved_results.py",
+      "bytes": 3480,
+      "sha256": "9c7e37c1ed02ca2a34a8ef10fed80087cf22906d928cacc609ce5a2f16fc645c"
+    }
+  ],
+  "validation": {
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "wheel_install_verified": true,
+    "fresh_full_training_systems": 3,
+    "noise_confirmation_trajectories": 540,
+    "noise_confirmation_violations": 0,
+    "pdf_pages": 3,
+    "pdf_visually_reviewed": true,
+    "contains_matlab_executables_or_mat_files": false
+  }
+}

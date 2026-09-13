@@ -1,0 +1,33 @@
+{
+  "premise": {
+    "max_iter": 6000,
+    "max_evaluations": 10000,
+    "x_tolerance": 0.0001,
+    "objective_tolerance": 1e-06,
+    "ridge": 1e-08,
+    "penalty": 0.0001,
+    "optimize": true,
+    "adaptive_simplex": false
+  },
+  "reduction": {
+    "q_target": 100,
+    "q_max": 1000,
+    "q_trigger": null,
+    "max_inflation": 1.1,
+    "max_cycle_ratio": 1.005,
+    "inflation_tolerance": 1e-10,
+    "cycle_tolerance": 1e-09,
+    "tie_tolerance": 1e-12
+  },
+  "batch_size": 16,
+  "max_buffer_size": 64,
+  "pe_ratio_min": 0.001,
+  "dominant_weight_min": 0.2,
+  "prior_shape_floor": 0.02,
+  "prior_radius_floor": 1e-07,
+  "prior_safety": 1.05,
+  "min_samples_per_group": 100,
+  "regression_bound_safety": 1.05,
+  "parameter_drift": 0.0,
+  "verify_training_witness": true
+}

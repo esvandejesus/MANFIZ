@@ -1,0 +1,18 @@
+{
+  "systems": [
+    1,
+    2,
+    3
+  ],
+  "confirmation_trajectories": 540,
+  "measured_channel_values": 1911600,
+  "noisy_violations": 0,
+  "minimum_noisy_slack": 0.05452504793017282,
+  "clean_violations": 0,
+  "minimum_clean_slack": 0.02789397726020669,
+  "mean_noise_mpiw": 0.5080277894643901,
+  "mean_validation_mpiw": 0.38687690303688027,
+  "all_optimizers_converged": false,
+  "scope": "Finite independent confirmation study; bounded-noise enclosure conditional on a valid clean envelope",
+  "seconds": 200.55070213600084
+}

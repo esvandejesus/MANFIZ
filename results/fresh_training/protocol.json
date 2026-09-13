@@ -1,0 +1,93 @@
+{
+  "version": "0.1.0",
+  "systems": [
+    1,
+    2,
+    3
+  ],
+  "config": {
+    "premise": {
+      "max_iter": 6000,
+      "max_evaluations": 10000,
+      "x_tolerance": 0.0001,
+      "objective_tolerance": 1e-06,
+      "ridge": 1e-08,
+      "penalty": 0.0001,
+      "optimize": true,
+      "adaptive_simplex": false
+    },
+    "reduction": {
+      "q_target": 100,
+      "q_max": 1000,
+      "q_trigger": null,
+      "max_inflation": 1.1,
+      "max_cycle_ratio": 1.005,
+      "inflation_tolerance": 1e-10,
+      "cycle_tolerance": 1e-09,
+      "tie_tolerance": 1e-12
+    },
+    "batch_size": 16,
+    "max_buffer_size": 64,
+    "pe_ratio_min": 0.001,
+    "dominant_weight_min": 0.2,
+    "prior_shape_floor": 0.02,
+    "prior_radius_floor": 1e-07,
+    "prior_safety": 1.05,
+    "min_samples_per_group": 100,
+    "regression_bound_safety": 1.05,
+    "parameter_drift": 0.0,
+    "verify_training_witness": true
+  },
+  "n_samples": 1800,
+  "discard": 30,
+  "training_runs": 4,
+  "validation_runs": 1,
+  "heldout_runs": 1,
+  "seed": 20260913,
+  "calibration_seed": 326091300,
+  "confirmation_seed": 426091300,
+  "calibration_replicates": 20,
+  "confirmation_replicates": 20,
+  "amplitudes": [
+    1.0,
+    1.15,
+    1.3
+  ],
+  "noise_standard_deviations": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "training_sensor_bound": 0.017320508075688773,
+  "frozen_evaluation_sensor_bound": 0.034641016151377546,
+  "rng": "NumPy default_rng/PCG64",
+  "initialization": "Fresh premise grid; no pretrained files read",
+  "calibration_safety": 1.1,
+  "validation_safety": 1.05,
+  "pairing": "Phase/noise seeds paired across amplitude/noise conditions; calibration and confirmation use separate bases",
+  "coverage_tolerance": 1e-10,
+  "created_utc": "2026-09-13T02:15:48.187679+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "blas_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "source_sha256": {
+    "__init__.py": "c8cbf317f315b6d6dc2120377f6a4262d39a956b6f7f67d265e6f0e1df3510a9",
+    "benchmarks.py": "d1d7e94dc2955d6188f63536cf839791f1e271eccca88110d2eb5f2e4907ff8a",
+    "calibration.py": "096e1f7e59df80449f6c14d3916aff516b07b5735c0e053583a28645f6c526d4",
+    "cli.py": "0828213c85c64a66f728f32128c4e4f644c846cc5732c663023e9165ff294fcf",
+    "config.py": "0eb859e724aa855972cb4413fad5b7277e2674a848d2a7e2baddcae2dbd1e821",
+    "data.py": "322dce9a4d3e74939745b7c2266d1229f4422f9a13022b3c2476e33666265f61",
+    "estimator.py": "73968b3abbeb164b1f5a4b6c66f1cce8e0e8c2a46af2e87a287709967da50497",
+    "io.py": "5db1aac16974b5d6b74e31cb6b8c27609249c283c008f87e70a417d0d193db88",
+    "metrics.py": "fc6fa540273d96f15cceffc8d92917dd528ad2ceeb18c92e01ab93e677f9d05e",
+    "plotting.py": "46490fc8faee95a2f63835745447818d261273e3f2f1d7a1748e2cc87e5b1579",
+    "premises.py": "294134e22bdd758de4ece630f1d8f67a7fd49211af2e6caf6ec5616d0ce75ce1",
+    "recursion.py": "feae6b0e30fbd761c202a98676b0ea45bb5e5a51cd29d71926f78ac64365f5f0",
+    "zonotopes.py": "d4d2c583663fa658b2f98d1bb2151a41ea8bb87857beb9254957db687be50b2e"
+  }
+}

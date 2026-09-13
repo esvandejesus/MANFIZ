@@ -1,0 +1,18 @@
+{
+  "System": 2,
+  "RetainedZeroBasedIndex": 1739,
+  "RawZeroBasedIndex": 1769,
+  "MatlabOneBasedIndex": 1770,
+  "PhaseSeed": 926093308,
+  "NoiseSeed": 926193308,
+  "Amplitude": 1.3,
+  "NoiseStd": 0.02,
+  "Output": 1,
+  "Measurement": 0.594191438452615,
+  "Center": 0.5258031504670126,
+  "Lower": 0.33492347332282857,
+  "Upper": 0.7166828276111967,
+  "Slack": 0.12249138915858168,
+  "AllTrajectoryViolations": 0,
+  "Scope": "Retrospective check of a known sample; separate from the 540 confirmation trajectories"
+}

@@ -1,0 +1,10 @@
+{
+  "premises": "Held fixed at newly trained Python parameters",
+  "posterior": "Reinitialized and fitted separately per budget",
+  "budgets": [
+    800,
+    1000,
+    1200
+  ],
+  "evaluation": "Same held-out runs; validation mode; no test-driven budget selection"
+}

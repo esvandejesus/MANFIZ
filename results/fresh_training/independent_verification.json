@@ -1,0 +1,71 @@
+{
+  "systems": [
+    {
+      "System": 1,
+      "TrainingChannelValues": 14160,
+      "TrainingViolations": 0,
+      "TrainingMinSlack": 0.09535234126553882,
+      "CommonWitnessMaxPhysicalResidual": [
+        0.03309964862598406,
+        0.02873333503825317
+      ],
+      "AcceptedUpdates": 810,
+      "PosteriorCap": 1016,
+      "CapViolations": 0,
+      "FeasibleReductionEvents": 24,
+      "FeasibleCycleViolations": 0,
+      "StoredPredictionsExact": true
+    },
+    {
+      "System": 2,
+      "TrainingChannelValues": 14160,
+      "TrainingViolations": 0,
+      "TrainingMinSlack": 0.05618187102633024,
+      "CommonWitnessMaxPhysicalResidual": [
+        0.026479487050931567,
+        0.025720491037401268
+      ],
+      "AcceptedUpdates": 816,
+      "PosteriorCap": 1016,
+      "CapViolations": 0,
+      "FeasibleReductionEvents": 22,
+      "FeasibleCycleViolations": 0,
+      "StoredPredictionsExact": true
+    },
+    {
+      "System": 3,
+      "TrainingChannelValues": 14160,
+      "TrainingViolations": 0,
+      "TrainingMinSlack": 0.08677528404753247,
+      "CommonWitnessMaxPhysicalResidual": [
+        0.028046275557844533,
+        0.028725386965833728
+      ],
+      "AcceptedUpdates": 780,
+      "PosteriorCap": 1016,
+      "CapViolations": 0,
+      "FeasibleReductionEvents": 13,
+      "FeasibleCycleViolations": 0,
+      "StoredPredictionsExact": true
+    }
+  ],
+  "confirmation_count_and_violations_consistent": true,
+  "original_experiment_summary": {
+    "systems": [
+      1,
+      2,
+      3
+    ],
+    "confirmation_trajectories": 540,
+    "measured_channel_values": 1911600,
+    "noisy_violations": 0,
+    "minimum_noisy_slack": 0.05452504793017282,
+    "clean_violations": 0,
+    "minimum_clean_slack": 0.02789397726020669,
+    "mean_noise_mpiw": 0.5080277894643901,
+    "mean_validation_mpiw": 0.38687690303688027,
+    "all_optimizers_converged": false,
+    "scope": "Finite independent confirmation study; bounded-noise enclosure conditional on a valid clean envelope",
+    "seconds": 200.55070213600084
+  }
+}

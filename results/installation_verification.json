@@ -1,0 +1,15 @@
+{
+  "package_version": "0.1.0",
+  "installed_wheel": "manfiz_toolbox-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "2cb682b5bfdf8f214962b8e34dd08020109296e03c7f35475d482daaa79de4f7",
+  "import_outside_source_tree": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "seconds": 0.15152812899941637
+}

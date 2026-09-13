@@ -1,0 +1,26 @@
+test_config_roundtrip_preserves_all_settings (test_configuration.ConfigurationTests.test_config_roundtrip_preserves_all_settings) ... ok
+test_fractional_budgets_and_memberships_are_rejected (test_configuration.ConfigurationTests.test_fractional_budgets_and_memberships_are_rejected) ... ok
+test_log_memberships_extreme_inputs_stay_normalized (test_data.DataTests.test_log_memberships_extreme_inputs_stay_normalized) ... ok
+test_narx_causality_and_experiment_boundaries (test_data.DataTests.test_narx_causality_and_experiment_boundaries) ... ok
+test_noise_bounds_and_reproducibility (test_data.DataTests.test_noise_bounds_and_reproducibility) ... ok
+test_normalization_training_only_and_constant_features (test_data.DataTests.test_normalization_training_only_and_constant_features) ... ok
+test_simulator_early_steps_hand_computed (test_data.DataTests.test_simulator_early_steps_hand_computed) ... ok
+test_chunked_radii_agree (test_estimator.EstimatorTests.test_chunked_radii_agree) ... ok
+test_free_run_does_not_read_future_output_measurements (test_estimator.EstimatorTests.test_free_run_does_not_read_future_output_measurements) ... ok
+test_fresh_joint_training_and_generic_dimensions (test_estimator.EstimatorTests.test_fresh_joint_training_and_generic_dimensions) ... ok
+test_noise_on_premise_columns_is_rejected (test_estimator.EstimatorTests.test_noise_on_premise_columns_is_rejected) ... ok
+test_noise_propagation_covers_all_box_vertices (test_estimator.EstimatorTests.test_noise_propagation_covers_all_box_vertices) ... ok
+test_reuse_with_different_training_targets_is_rejected (test_estimator.EstimatorTests.test_reuse_with_different_training_targets_is_rejected) ... ok
+test_save_load_exact_for_all_interval_modes_and_no_pickle (test_estimator.EstimatorTests.test_save_load_exact_for_all_interval_modes_and_no_pickle) ... ok
+test_adaptive_selection_matches_explicit_candidate_search (test_geometry.GeometryTests.test_adaptive_selection_matches_explicit_candidate_search) ... ok
+test_joint_feasibility_is_stricter_than_pointwise_enclosure (test_geometry.GeometryTests.test_joint_feasibility_is_stricter_than_pointwise_enclosure) ... ok
+test_linear_map_and_minkowski_support (test_geometry.GeometryTests.test_linear_map_and_minkowski_support) ... ok
+test_measurement_update_contains_every_feasible_prior_vertex (test_geometry.GeometryTests.test_measurement_update_contains_every_feasible_prior_vertex) ... ok
+test_outer_reduction_support_and_hard_budget (test_geometry.GeometryTests.test_outer_reduction_support_and_hard_budget) ... ok
+test_original_simulator_trajectories (test_matlab_reference.MatlabReferenceTests.test_original_simulator_trajectories) ... ok
+test_original_stored_centers_with_original_parameters (test_matlab_reference.MatlabReferenceTests.test_original_stored_centers_with_original_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.151s
+
+OK
